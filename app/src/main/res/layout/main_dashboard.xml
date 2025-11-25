@@ -572,64 +572,80 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <com.google.android.material.button.MaterialButton
+        <FrameLayout
             android:id="@+id/navHome"
-            style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            android:gravity="center"
-            android:contentDescription="@string/app_name"
-            android:text=""
-            app:backgroundTint="#FFE7B3"
-            app:icon="@drawable/ic_nav_home"
-            app:iconSize="26dp"
-            app:iconTint="#2B1B0F" />
+            android:background="@drawable/nav_item_shape"
+            android:backgroundTint="#2B1B0F"
+            android:foreground="?attr/selectableItemBackgroundBorderless">
 
-        <com.google.android.material.button.MaterialButton
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_nav_home"
+                app:tint="#FFFFFF" />
+        </FrameLayout>
+
+        <FrameLayout
             android:id="@+id/navAi"
-            style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            android:gravity="center"
-            android:contentDescription="@string/app_name"
-            android:text=""
-            app:backgroundTint="#2B1B0F"
-            app:icon="@drawable/ic_nav_ai"
-            app:iconSize="28dp"
-            app:iconTint="#FFFFFF" />
+            android:background="@drawable/nav_item_shape"
+            android:backgroundTint="#FFE7B3"
+            android:foreground="?attr/selectableItemBackgroundBorderless">
 
-        <com.google.android.material.button.MaterialButton
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_nav_ai"
+                app:tint="#2B1B0F" />
+        </FrameLayout>
+
+        <FrameLayout
             android:id="@+id/navCalendar"
-            style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            android:gravity="center"
-            android:contentDescription="@string/app_name"
-            android:text=""
-            app:backgroundTint="#FFE7B3"
-            app:icon="@drawable/ic_nav_calendar"
-            app:iconSize="26dp"
-            app:iconTint="#2B1B0F" />
+            android:background="@drawable/nav_item_shape"
+            android:backgroundTint="#FFE7B3"
+            android:foreground="?attr/selectableItemBackgroundBorderless">
 
-        <com.google.android.material.button.MaterialButton
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_nav_calendar"
+                app:tint="#2B1B0F" />
+        </FrameLayout>
+
+        <FrameLayout
             android:id="@+id/navSettings"
-            style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
-            android:contentDescription="@string/app_name"
-            android:text=""
-            app:backgroundTint="#FFE7B3"
-            app:icon="@drawable/ic_nav_settings"
-            app:iconSize="26dp"
-            app:iconTint="#2B1B0F" />
+            android:background="@drawable/nav_item_shape"
+            android:backgroundTint="#FFE7B3"
+            android:foreground="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_nav_settings"
+                app:tint="#2B1B0F" />
+        </FrameLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
