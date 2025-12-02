@@ -430,6 +430,151 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Quick mood check-in card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/quickCheckInCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#FAF3DF"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Quick check‑in"
+                        android:textColor="#2B1B0F"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Tell Nimbus how you feel in one tap."
+                        android:textColor="#7B6851"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.chip.Chip
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="Drained"
+                            app:chipBackgroundColor="#FFD4C4"
+                            app:chipStrokeWidth="0dp"
+                            android:textColor="#2B1B0F" />
+
+                        <com.google.android.material.chip.Chip
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="Soft okay"
+                            app:chipBackgroundColor="#FFE7B3"
+                            app:chipStrokeWidth="0dp"
+                            android:textColor="#2B1B0F" />
+
+                        <com.google.android.material.chip.Chip
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Glowing"
+                            app:chipBackgroundColor="@color/teal_200"
+                            app:chipStrokeWidth="0dp"
+                            android:textColor="#FFFFFF" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnOpenAiFromCheckIn"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Open chat with Nimbus"
+                        android:textColor="#2B1B0F" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Gratitude sparks card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/gratitudeCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#FFF5D8"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Gratitude sparks"
+                        android:textColor="#2B1B0F"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/gratitudePrompt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Today, notice one tiny moment that made your nervous system exhale."
+                        android:textColor="#7B6851"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:id="@+id/gratitudeStreak"
+                            style="@style/Widget.MaterialComponents.LinearProgressIndicator"
+                            android:layout_width="0dp"
+                            android:layout_height="8dp"
+                            android:layout_weight="1"
+                            android:progress="60"
+                            app:indicatorColor="#47A0A1"
+                            app:trackColor="#E5D2A2" />
+
+                        <TextView
+                            android:id="@+id/gratitudeStreakLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="5‑day streak"
+                            android:textColor="#5E4B2C"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -12,6 +12,7 @@ import androidx.core.widget.NestedScrollView
 import com.rahulxiao.emotiverse.R
 import com.rahulxiao.emotiverse.ui.ai.AiActivity
 import com.rahulxiao.emotiverse.ui.calender.CalenderActivity
+import com.rahulxiao.emotiverse.ui.settings.SettingsActivity
 
 class MainDashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,9 +52,9 @@ class MainDashboardActivity : AppCompatActivity() {
             startActivity(Intent(this, CalenderActivity::class.java))
         }
 
-        // Navigate to Settings (placeholder)
+        // Navigate to Settings Activity
         findViewById<FrameLayout>(R.id.navSettings).setOnClickListener {
-            Toast.makeText(this, "Settings coming soon", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, SettingsActivity::class.java))
         }
     }
 }

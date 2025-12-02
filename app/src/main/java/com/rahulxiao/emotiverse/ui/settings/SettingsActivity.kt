@@ -1,4 +1,4 @@
-package com.rahulxiao.emotiverse.ui.calender
+package com.rahulxiao.emotiverse.ui.settings
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,24 +6,22 @@ import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.AppCompatImageButton
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.widget.NestedScrollView
 import com.rahulxiao.emotiverse.R
 import com.rahulxiao.emotiverse.ui.ai.AiActivity
+import com.rahulxiao.emotiverse.ui.calender.CalenderActivity
 import com.rahulxiao.emotiverse.ui.dashboard.MainDashboardActivity
-import com.rahulxiao.emotiverse.ui.settings.SettingsActivity
 
-class CalenderActivity : AppCompatActivity() {
+class SettingsActivity : AppCompatActivity() {
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.calender_activity)
+        setContentView(R.layout.settings_activity)
 
-        // Set up window insets for edge-to-edge display
-        val scrollView = findViewById<NestedScrollView>(R.id.calendarScroll)
+        val scrollView = findViewById<NestedScrollView>(R.id.settingsScroll)
         ViewCompat.setOnApplyWindowInsetsListener(scrollView) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(
@@ -37,9 +35,6 @@ class CalenderActivity : AppCompatActivity() {
 
         // Set up bottom navigation
         setupBottomNavigation()
-        
-        // Set up week navigation buttons
-        setupWeekNavigation()
     }
 
     private fun setupBottomNavigation() {
@@ -52,32 +47,19 @@ class CalenderActivity : AppCompatActivity() {
         // Navigate to AI Activity
         findViewById<FrameLayout>(R.id.navAi).setOnClickListener {
             startActivity(Intent(this, AiActivity::class.java))
-        }
-
-        // Calendar is already the current screen, so just show a message
-        findViewById<FrameLayout>(R.id.navCalendar).setOnClickListener {
-            // Already on calendar, no action needed
-            Toast.makeText(this, "Already on Calendar", Toast.LENGTH_SHORT).show()
-        }
-
-        // Navigate to Settings Activity
-        findViewById<FrameLayout>(R.id.navSettings).setOnClickListener {
-            startActivity(Intent(this, SettingsActivity::class.java))
             finish()
         }
-    }
 
-    private fun setupWeekNavigation() {
-        // Previous week button
-        findViewById<AppCompatImageButton>(R.id.btnPrevWeek).setOnClickListener {
-
-            Toast.makeText(this, "Previous week", Toast.LENGTH_SHORT).show()
+        // Navigate to Calendar Activity
+        findViewById<FrameLayout>(R.id.navCalendar).setOnClickListener {
+            startActivity(Intent(this, CalenderActivity::class.java))
+            finish()
         }
 
-        // Next week button
-        findViewById<AppCompatImageButton>(R.id.btnNextWeek).setOnClickListener {
-
-            Toast.makeText(this, "Next week", Toast.LENGTH_SHORT).show()
+        // Settings is already the current screen
+        findViewById<FrameLayout>(R.id.navSettings).setOnClickListener {
+            Toast.makeText(this, "Already on Settings", Toast.LENGTH_SHORT).show()
         }
     }
 }
+
